@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>WELCOME TO LITERARIO CLUB</title>
+     <link rel="stylesheet" href="style14.css">
+</head>    
+<body>
+    <div class="logo">
+       <img src="2.png">
+    </div>
+    
+<div class= "container" >
+       <span class="text1" style="color:dodgerblue">WELCOME TO</span>
+       <span class ="text2" style="color:dodgerblue">LITERARIO CLUB</span> 
+    <br>
+    <span><b><i>All we have to decide is what to do with the time that is given us.</i></b></span>
+       </div>
+<div class="login-page">
+      <div class= "form">
+             <img src="avatar1.png"  class="avatar">
+             <form class="register-form" action="insert.php" method="post" onsubmit=" return validation()">
+              <input type="text" name="yourname" id="yourname"   placeholder="Your Name" required/>
+                  <label id="yn" style="color: red;visibility: hidden;font-family:sans-serif;font-style:normal;font-size: 14px;text-align: left;">Invalid Name</label>
+
+              <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                  <label id="mail" style="color: red;visibility: hidden;font-family:sans-serif;font-style:normal;font-size: 14px;text-align: left;">Invalid Email</label>
+
+              <input type="number" name="number" id="number" autocomplete="off"  placeholder="Mobile Number" required/>
+                  <label id="num" style="color: red;visibility: hidden;font-family:sans-serif;font-style:normal;font-size: 14px;text-align: left;">Invalid Number</label>
+                  
+                                     <!--  <button >Pay</button>-->
+                 <div id="paypal-button"></div>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+paypal.Button.render({
+// Configure environment
+env: 'sandbox',
+client: {
+sandbox: 'demo_sandbox_client_id',
+production: 'demo_production_client_id'
+},
+// Customize button (optional)
+locale: 'en_US',
+style: {
+size: 'small',
+color: 'gold',
+shape: 'pill',
+},
+// Set up a payment
+payment: function (data, actions) {
+return actions.payment.create({
+transactions: [{
+amount: {
+total: '0.01',
+currency: 'USD'
+}
+}]
+});
+},
+// Execute the payment
+onAuthorize: function (data, actions) {
+return actions.payment.execute()
+.then(function () {
+// Show a confirmation message to the buyer
+window.alert('Thank you for your purchase!');
+});
+}
+}, '#paypal-button');
+</script>
+
+              <p class="message3">Already registered  ?  <a href="#"> Login </a></p>
+     </form>
+     
+     
+     <form class ="login-form" action="abd.php" method="post" onsubmit="return validate()">
+              <input type="text" name ="username" id ="username" placeholder="Yourname" required/>
+                    <label id="user" style="color: red;visibility: hidden;font-family:sans-serif;font-style:normal;font-size: 14px;text-align: left;">Incorrect Username</label>
+              
+              <input type="password" name="password" id="password2" placeholder="Event" required/>
+                    <label id="pass2" style="color: red;visibility: hidden;font-family:sans-serif;font-style:normal;font-size: 14px;text-align: left;">Incorrect Password </label>
+
+         <button name="submit" id="submit"> CHECK </button>
+              <p class ="message">Not Registered ?  <a href="#">  Register  </a> </p>
+              
+         </form>
+         
+        
+</div>
+    </div>
+    <dialog open style="background-color: rgb(0,0,0,0);
+                        float:right;
+                        top:270;
+                        left:370;
+                        
+                        right:50;
+                        border-color: blueviolet;">
+        <p style="color:dimgrey" ><h4><b>Expressing something is not easy for everybody but, everybody has to do this because all humans have something to express. With the same<br> motive, the Department of English of G.L.A University introduced a Literature Club in the year 2015 named Literario.’\ This club is all about<br> encouraging students to reveal themselves, their perceptions and emotions and to build confidence in their creative spirits. Literario, the official<br> literary club of GLAU provides platform to get in with the taste of literature. Literario is just the right step that gives students stage that is all<br> theirs. It works to invoke the diction of participation and team spirit and gets into the zeal of making its members ready to face the world in terms<br> of communication.<br><br> ‘Literario’ brings in activities and challenges such as Director’s cut, Instantania, Debates, Discussion Fiesta, Declamation, Quizzes, etc that brush<br> up the literary skills of an individual from the grass root level. ‘Literario’ also works upon inviting various renowned guest speakers from various<br> fields who share inspirational stories, experiences and talks.<br>This club is now growing towards betterment with its every meet .It has a strong committee of student executive members belonging to<br> various courses and year.  Literario is truly a club of the students, by the students and for the students.</b></h4></p>
+    </dialog>
+   <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+    </script>
+    <script>
+       $('.message a').click(function(e){
+       $('.register-form').animate({height:"toggle",opacity:"toggle"}, "slow");                     
+       $('.login-form').css('display','none');                    
+       $('.forget-form').css('display','none');
+           e.preventDefault();
+       });
+        </script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+    </script>
+    <script>
+       $('.message3 a').click(function(p){
+       $('.login-form').animate({height:"toggle",opacity:"toggle"}, "slow");                     
+    $('.register-form').css('display','none');                    
+    $('.forget-form').css('display','none');
+           p.preventDefault();
+       });
+        
+        
+        
+        
+        
+        
+        
+    </script>
+         <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+
+    </script>
+    <script>
+       $('.message2 a').click(function(){
+       $('.forget-form').animate({height:"toggle",opacity:"toggle"}, "slow");                     
+                         });
+    </script>
+   
+    
+    
+    
+    
+    <script type="text/javascript">
+        
+        function validation(){
+           
+            var yourname=document.getElementById("yourname").value;
+            var email=document.getElementById("email").value;
+            var number=document.getElementById("number").value;
+            var password=document.getElementById("password").value;
+            var confirmpassword=document.getElementById("confirmpassword").value;
+            
+           for(i=0;i<yourname.length;i++)
+               {
+                   ch=yourname.charAt(i);
+                   if(!(ch>='a'&&ch<='z')&&!(ch>='A'&&ch<='Z')&&!(ch='')){
+                             document.getElementById("yn").style.visibility="visible";
+                       return false;
+                   }
+               }
+            
+        if(password.length<5){
+            
+            document.getElementById("pass").style.visibility="visible";
+              
+            return false;
+            }
+        if(password!=confirmpassword){
+            document.getElementById("cnf").style.visibility="visible";
+            return false;
+        }
+        if(isNaN(number)||(number.length!=10)){
+            document.getElementById('num').style.visibility="visible";
+            return false;
+        }   
+        if(email.indexOf('@')<=0){
+            document.getElementById('mail').style.visibility="visible";
+            return false;
+        }    
+        if((email.charAt(email.length-4)!='.')&&(email.charAt(email.length-3)!='.')){
+                document.getElementById('mail').style.visibility="visible";
+            return false;
+            }
+            
+            
+        }
+    
+    </script>                                             >
+    
+    <script type="text/javascript">
+     function validate()
+        {
+         
+         var username = document.getElementById("username").value;
+         var pass = document.getElementById("password2").value;    
+         ch=username.charAt(0);
+            
+            if(ch=='_'){
+                document.getElementById("user").style.visibility="visible";
+                return false;
+            }
+         
+        if(pass.length<5){
+            
+            document.getElementById("pass2").style.visibility="visible";
+              
+            return false;
+            }
+              
+         
+         
+     }
+    
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    
+</body>
+    
+</html>

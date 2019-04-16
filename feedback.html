@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+    body{background: white url('feedback.jpg');  
+    
+background-repeat: no-repeat;  
+background-attachment: fixed;  
+background-position: center;  }
+input[type=text],input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  position: relative;
+  height: 550px;
+  width: 700px;
+  margin: 0 auto;
+  background: rgba(130,130,130,.3);
+  padding: 20px 22px;
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.4);
+  border-left-color: rgba(255,255,255,.4);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+}
+</style>
+</head>
+<body>
+
+<h3 style="font-size:50px;text-align: center;margin-left: -50px; color:cornflowerblue";>Feedback Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+      <label for="fname" style="color: deeppink"><b>Your Name</b></label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="email" style="color: deeppink"><b>Your Email</b></label>
+    <input type="email" id="email" name="email" placeholder="Your Email">
+
+    
+
+      <label for="subject" style="color: deeppink"><b>Subject</b></label>
+    <textarea id="subject" name="subject" placeholder=" Youe Valuable Feedback.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
